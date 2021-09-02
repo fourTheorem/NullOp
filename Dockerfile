@@ -1,5 +1,4 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0.9
-# COPY bin/Release/net5.0/publish/ App/
 COPY bin/Debug/net5.0/publish/ App/
 WORKDIR /App
 ENV ASPNETCORE_ENVIRONMENT=Development

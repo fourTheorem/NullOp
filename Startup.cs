@@ -19,7 +19,6 @@ namespace NullOp
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            Console.Write("++++++++++++++++++++++++++++ here +++++++++++++++++++++++++++++");
         }
 
         public IConfiguration Configuration { get; }
@@ -44,13 +43,9 @@ namespace NullOp
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NullOp v1"));
             }
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
